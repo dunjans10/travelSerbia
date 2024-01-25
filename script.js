@@ -27,3 +27,14 @@ const linkAction = () => {
 }
 
 navLink.forEach(n => n.addEventListener('click', linkAction))
+
+
+//Change background header
+
+const blurHeader = () => {
+  const header = document.getElementById('header');
+  //when the scroll is greater than 50 vh add the blur-header class
+  this.scrollY >= 50 ? header.classList.add('blur-header') : header.classList.remove('blur-header')
+}
+
+window.addEventListener('scroll', blurHeader)
